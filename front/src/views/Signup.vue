@@ -59,10 +59,11 @@ export default {
         url: 'http://127.0.0.1:8000/accounts/signup/',
         data: this.credentials,
       })
-      .then(() => {
+      .then((res) => {
+        console.log(res)
         this.$router.push({ name: 'Login' })
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err)
       })
     }
