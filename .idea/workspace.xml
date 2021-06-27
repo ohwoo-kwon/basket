@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e02ef951-6de8-4007-96d2-b6729cbf1b7b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/.vscode/settings.json" afterDir="false" />
-    </list>
+    <list default="true" id="e02ef951-6de8-4007-96d2-b6729cbf1b7b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,9 +35,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1624694143181">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1624770918524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1624694143181" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1624770918524" />
   </component>
 </project>
