@@ -4,6 +4,7 @@ from django.conf import settings
 # Create your models here.
 
 class Gym(models.Model):
+    name = models.CharField(max_length=20)
     address = models.CharField(max_length=70)
     court_length = models.IntegerField()
     court_width = models.IntegerField()

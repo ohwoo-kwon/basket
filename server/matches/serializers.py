@@ -5,10 +5,12 @@ class GymSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Gym
-        fields = '__all__'
+        # fields = '__all__'
+        exclude = ('owner',)
 
 class MatchSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Match
-        fields = '__all__'
+        # fields = '__all__'
+        exclude = ('owner',)

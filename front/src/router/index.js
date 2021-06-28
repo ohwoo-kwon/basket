@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import PickUp from '../views/PickUp.vue'
 import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
+import GymCreate from '../views/GymCreate.vue'
+import PickUpCreate from '../views/PickUpCreate.vue'
 
 Vue.use(VueRouter)
 
@@ -25,6 +27,16 @@ const routes = [
     path: '/signup',
     name: 'Signup',
     component: Signup
+  },
+  {
+    path: '/gym/create',
+    name: 'GymCreate',
+    component: GymCreate
+  },
+  {
+    path: '/pickup/create',
+    name: 'PickUpCreate',
+    component: PickUpCreate
   },
 ]
 
