@@ -29,6 +29,12 @@ def gym_create(request):
             serializer.save(owner=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+@api_view(['GET'])
+def gym_detail(request, gym_pk):
+    gym = get_object_or_404(Gym, pk=gym_pk)
+    serializer = GymSerializer(gym)
+    return Response(serializer.data)
+
 @api_view(['PUT', 'DELETE'])
 @authentication_classes([JSONWebTokenAuthentication])
 @permission_classes([IsAuthenticated])
@@ -50,8 +56,8 @@ def gym_update(request, gym_pk):
 @permission_classes([IsAuthenticated])
 def match_create(request):
     if request.method == 'GET':
-        matches = get_list_or_404(Match)
-        serializer = MatchSerializer(matches, many=True)
+        # matches = get_list_or_404(Match)
+        serializer = MatchSerializer(request.user.matches, many=True)
         return Response(serializer.data)
     
     elif request.method == 'POST':
@@ -76,3 +82,9 @@ def match_update(request, match_pk):
     elif request.method == 'DELETE':
         match.delete()
         return Response({ 'id': match_pk })
+
+@api_view(['GET'])
+def match_all(request):
+    match = get_list_or_404(Match)
+    serializer = MatchSerializer(match, many=True)
+    return Response(serializer.data)
