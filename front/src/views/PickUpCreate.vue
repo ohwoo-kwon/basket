@@ -64,8 +64,8 @@ export default {
         data: this.matchInfo,
         headers,
       })
-      .then(res => {
-        console.log(res)
+      .then(() => {
+        this.$router.push({ name: 'Home' })
       })
       .catch(err => {
         console.log(err)
