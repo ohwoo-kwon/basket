@@ -1,6 +1,8 @@
 <template>
   <div>
-    {{ match }}
+    <div>{{match.start_time}}~{{match.finish_time}}</div>
+    <div>{{ gymName }}</div>
+    <div>{{ gymAddress }}</div>
   </div>
 </template>
 
@@ -12,13 +14,20 @@ export default {
   props: {
     match: Object,
   },
+  data : function () {
+    return {
+      gymName: null,
+      gymAddress: null,
+    }
+  },
   created: function () {
     axios({
       method: 'get',
       url: `http://127.0.0.1:8000/matches/gym/${this.match.gym}/detail/`
     })
     .then(res => {
-      this.match.gym = res.data.name
+      this.gymName = res.data.name
+      this.gymAddress = res.data.address
     })
     .catch(err => {
       console.log(err)
