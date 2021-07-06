@@ -32,6 +32,14 @@ export default {
     checkDate: function (date) {
       // console.log(date)
       this.showMatches = this.matches.filter(match => match.date === date)
+      // console.log(this.showMatches)
+      this.showMatches.sort(function (a, b) {
+        if (a.start_time > b.start_time) {
+          return 1
+        } else {
+          return -1
+        }
+      })
     }
   },
   created: function () {

@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
 import GymCreate from '../views/GymCreate.vue'
 import PickUpCreate from '../views/PickUpCreate.vue'
+import MatchDetail from '../views/MatchDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -37,6 +38,11 @@ const routes = [
     path: '/pickup/create',
     name: 'PickUpCreate',
     component: PickUpCreate
+  },
+  {
+    path: '/match/detail',
+    name: 'MatchDetail',
+    component: MatchDetail
   },
 ]
 

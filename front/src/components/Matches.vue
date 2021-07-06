@@ -3,6 +3,7 @@
     <div>{{match.start_time}}~{{match.finish_time}}</div>
     <div>{{ gymName }}</div>
     <div>{{ gymAddress }}</div>
+    <button @click="matchDetail">상세보기</button>
   </div>
 </template>
 
@@ -18,6 +19,11 @@ export default {
     return {
       gymName: null,
       gymAddress: null,
+    }
+  },
+  methods: {
+    matchDetail: function () {
+      this.$router.push({name: 'MatchDetail'}, this.match)
     }
   },
   created: function () {
